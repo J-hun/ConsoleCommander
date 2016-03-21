@@ -5,6 +5,7 @@
  */
 package consolcommander;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -43,7 +44,7 @@ public final class ConsoleIOHelper {
 
                 answer = new Scanner(System.in).nextInt();
                 matches = true;
-            } catch (Exception e) {
+            } catch (InputMismatchException ex) {
                 System.out.println(messageBox("Csak számokat írhatsz be...!", question));
             }
         }
